@@ -30,7 +30,7 @@ const LeftBar = () => {
               alt=""
             />
             <Link to={"/profile/" + currentUser.id} >
-            <span>{currentUser.name}</span>
+            <span style={{ fontWeight: 'bold' }}>{currentUser.name}</span>
             </Link>
           </div>
           <div className="item">
