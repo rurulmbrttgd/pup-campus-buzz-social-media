@@ -26,7 +26,7 @@ export const AuthContextProvider = ({ children }) => {
   
   const logout = async () => {
     try {
-      await axios.post("http://192.168.1.101:8800/api/auth/logout", null, {
+      await axios.post("https://pupcb-api2-73ce947d432d.herokuapp.com/api/auth/logout", null, {
         withCredentials: true,
       });
       setCurrentUser(null); // Update the currentUser state to null after logout
