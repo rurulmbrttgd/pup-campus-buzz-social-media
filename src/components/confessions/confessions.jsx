@@ -2,13 +2,10 @@ import Confession from "../confession/Confession";
 import "./confessions.scss";
 import { useQuery } from "@tanstack/react-query";
 import { makeRequest } from "../../axios";
-import axios from "axios";
 
 const Confessions = ({userId}) => {
   const { isLoading, error, data } = useQuery(["confessions"], () =>
-    axios.get("/confessions", {
-        withCredentials: true,
-      }).then((res) => {
+    makeRequest.get("/confessions?userId="+userId).then((res) => {
       return res.data;
     })
   );
