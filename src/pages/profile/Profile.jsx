@@ -16,8 +16,9 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/authContext";
 import Update from "../../components/update/Update";
 import { useState } from "react";
+import { Helmet } from 'react-helmet';
 
-const Profile = () => {
+const Profile = (children) => {
   const [openUpdate, setOpenUpdate] = useState(false);
   const { currentUser } = useContext(AuthContext);
 
@@ -59,6 +60,9 @@ const Profile = () => {
 
   return (
     <div className="profile">
+      <Helmet>
+        <title>Profile</title>
+      </Helmet>
       {isLoading ? (
         "loading"
       ) : (
