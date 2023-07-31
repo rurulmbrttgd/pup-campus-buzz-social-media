@@ -10,8 +10,8 @@
     border-bottom: 1px solid themed("border");
     position: sticky;
     top: 0;
-    background-color: themed("bg");
-    color:themed("textColor");
+    background-image: linear-gradient(to right, yellow, maroon);
+    color: white;
     z-index: 999;
 
     .left {
@@ -22,7 +22,7 @@
       span {
         font-weight: bold;
         font-size: 20px;
-        color: themed("logo");
+        color: maroon;
       }
 
       .search {
@@ -32,12 +32,13 @@
         border: 1px solid themed("border");
         border-radius: 5px;
         padding: 5px;
+        color: white;
 
         input {
           border: none;
           width: 500px;
           background-color: transparent;
-          color: themed("textColor");
+          color: white;
 
           @include mobile{
             display: none;
