@@ -22,12 +22,25 @@ export const AuthContextProvider = ({ children }) => {
   }
   
 }
+
+  
+  const logout = async () => {
+    try {
+      await axios.post("http://192.168.1.101:8800/api/auth/logout", null, {
+        withCredentials: true,
+      });
+      setCurrentUser(null); // Update the currentUser state to null after logout
+    } catch (err) {
+      console.error("Logout error:", err);
+      // Handle any errors during logout if necessary
+    }
+  };
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(currentUser));
   }, [currentUser]);
 
   return (
-    <AuthContext.Provider value={{ currentUser, login }}>
+    <AuthContext.Provider value={{ currentUser, login, logout }}> {/* Include logout in the context */}
       {children}
     </AuthContext.Provider>
   );
