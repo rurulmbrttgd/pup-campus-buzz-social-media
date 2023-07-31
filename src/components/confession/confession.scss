@@ -1,6 +1,10 @@
 @import "../../style.scss";
+// @import "compass/css3";
 
-.post {
+$color: rgb(255,215,7);
+$colorDark: darken($color, 10%) transparent;
+
+.post1 {
   @include themify($themes) {
     -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
     -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
@@ -8,9 +12,14 @@
     border-radius: 20px;
     background-color: themed("bg");
     color: themed("textColor");
-
+    width: 300px;
     .container {
       padding: 20px;
+      padding: 2em;
+      background: #C4391D;
+      // position: relative;
+      min-height: 10em;
+    
 
       .user {
         display: flex;
@@ -45,7 +54,9 @@
 
       .content {
         margin: 20px 0px;
-
+        h1{
+          margin-bottom: 10px;
+        }
         img {
           width: 100%;
           max-height: 500px;
@@ -68,19 +79,20 @@
         }
       }
     }
+    .container.note-design-b {
+      // Define styles for note_design 'b' here
+      // For example:
+      background-color: $color; // Green
+      // color: black;
+    }
+    .container.note-design-c {
+      // Define styles for note_design 'b' here
+      // For example:
+      background-color: #F8A229; // Green
+      // color: black;
+    }
+   
   }
 }
 
-.post.note-design-a {
-  // Define styles for note_design 'a' here
-  // For example:
-  background-color: #ff0000; // Red
-  color: white;
-}
 
-.post.note-design-b {
-  // Define styles for note_design 'b' here
-  // For example:
-  background-color: #00ff00; // Green
-  color: black;
-}

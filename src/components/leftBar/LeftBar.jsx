@@ -30,16 +30,20 @@ const LeftBar = () => {
               alt=""
             />
             <Link to={"/profile/" + currentUser.id} >
-            <span>{currentUser.name}</span>
+            <span style={{ fontWeight: 'bold' }}>{currentUser.name}</span>
             </Link>
           </div>
           <div className="item">
             <img src={Friends} alt="" />
-            <span>Friends</span>
+            <Link to={"/logout"} >
+            <span>Logout</span>
+            </Link>
           </div>
           <div className="item">
             <img src={Groups} alt="" />
-            <span>Groups</span>
+            <Link to={"/confession"} >
+            <span>Confession Hall</span>
+            </Link>
           </div>
           <div className="item">
             <img src={Market} alt="" />

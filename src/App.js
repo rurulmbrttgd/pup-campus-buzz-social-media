@@ -12,6 +12,7 @@ import RightBar from "./components/rightBar/RightBar";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import Confession from "./pages/confession/Confession";
+import Logout from "./pages/logout/Logout";
 import "./style.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
@@ -73,6 +74,10 @@ function App() {
         {
           path: "/confession",
           element: <Confession />,
+        },
+        {
+          path: "/logout",
+          element:<Logout />
         },
       ],
     },

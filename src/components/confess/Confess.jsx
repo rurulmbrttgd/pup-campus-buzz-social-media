@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../context/authContext";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { makeRequest } from "../../axios";
+import plus from "../../assets/plus.png"
 // import karlosImage from "../../../public/upload/1690467391565karlos.jpg";
 const Confess = () => {
   const file = useState(null);
@@ -13,6 +14,12 @@ const Confess = () => {
   const [title, setTitle] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [anonymous, setAnonymous] = useState(true);
+  const [inputs, setInputs] = useState({
+    username: "",
+    email: "",
+    password: "",
+    name: "",
+  });
 
   
 
@@ -72,7 +79,7 @@ const Confess = () => {
       <div className="container">
         <div className="top">
           <div className="left">
-            <img src={currentUser.profilePic} alt="" />
+            <img src={plus} alt="" />
             <input
               type="text"
               placeholder={`Click to Add a Confession`} 
@@ -81,9 +88,6 @@ const Confess = () => {
               value={confession}
             />
           </div>
-          <div className="right">
-            <button onClick={handleClick}> + </button>
-          </div>
         </div>
       </div>
       {showModal && (
@@ -91,16 +95,16 @@ const Confess = () => {
           <div className="modal-content">
             <h2>Write Your Confession</h2>
             
-            <div>
+            <div class='second-layer'>
               <label>
-                <input
+                <input 
                   type="checkbox"
                   checked={anonymous}
                   onChange={() => setAnonymous(!anonymous)}
                 />
                 Anonymous
               </label>
-              <button onClick={handleClick}>Submit Confession</button>
+              <button class = 'submit-button' onClick={handleClick}>Post</button>
             </div>
             <div>
             <input
@@ -134,7 +138,7 @@ const Confess = () => {
               >
               </button>
             </div>
-            <button onClick={handleCloseModal}>Close</button>
+            <button class = 'close-button' onClick={handleCloseModal}>Close</button>
           </div>
         </div>
       )}

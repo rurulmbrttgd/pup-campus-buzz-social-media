@@ -28,14 +28,20 @@
         background-color: themed("border");
       }
 
+      
       .menu {
         display: flex;
         flex-direction: column;
         gap: 20px;
 
         span {
-          font-size: 12px;
-        }
+          color: maroon;
+           font-size: 12px;
+         }
+         
+         span .name{
+           font-weight: bold;
+         }
 
         .user {
           display: flex;
