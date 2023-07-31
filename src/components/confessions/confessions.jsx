@@ -5,7 +5,9 @@ import { makeRequest } from "../../axios";
 
 const Confessions = ({userId}) => {
   const { isLoading, error, data } = useQuery(["confessions"], () =>
-    makeRequest.get("/confessions?userId="+userId).then((res) => {
+    makeRequest.get("/confessions", {
+        withCredentials: true,
+      }).then((res) => {
       return res.data;
     })
   );
