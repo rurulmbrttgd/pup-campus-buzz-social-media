@@ -4,7 +4,7 @@ const Confession = ({ post }) => {
 
 
   return (
-    <div className='post'>
+    <div className='post1'>
       <div className={`container ${post.note_design === 1 ?  'note-design-b' : post.note_design === 2  ?  'note-design-c' :''}`}>
         <div className="content">
           <h1>{post.title}</h1>
