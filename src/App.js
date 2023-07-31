@@ -74,6 +74,10 @@ function App() {
           path: "/confession",
           element: <Confession />,
         },
+        {
+          path: "/logout",
+          element:<Logout />
+        },
       ],
     },
     {
