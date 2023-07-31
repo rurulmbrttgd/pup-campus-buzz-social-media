@@ -1,0 +1,89 @@
+.register {
+  height: 100vh;
+  background: url("https://res.cloudinary.com/dezndgyxo/image/upload/v1690601325/PUP_img_zxceei.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+
+    .left {
+      flex: 1;
+      background:
+        url("https://res.cloudinary.com/dezndgyxo/image/upload/v1690601055/PUPCB_logo_hyrqs9.png?auto=compress&cs=tinysrgb&w=1600")
+          center;
+      background-color: rgba(0, 0, 0, 0);
+      background-size: 130%;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      color: white;
+      background-repeat: no-repeat;
+
+      h1 {
+        font-size: 100px;
+        line-height: 100px;
+      }
+      
+      // p {
+      // }
+
+      span {
+        font-size: 14px;
+      }
+      
+      button {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: maroon;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+
+      h1 {
+      color: #555;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        
+        input {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        padding: 20px 10px;
+        }
+        
+        button {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: maroon;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
